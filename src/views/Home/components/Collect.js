@@ -1,5 +1,5 @@
 import React from 'react'
-import Container from '../../components/Container/Container';
+import Container from '../../../components/Container/Container';
 import { Link } from 'react-router-dom';
 export default function Collect() {
     const collectList = [

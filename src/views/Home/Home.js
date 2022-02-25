@@ -1,11 +1,14 @@
 import React from 'react'
-import News from './News'
-import Collect from './Collect'
-import Product from './Product'
-import TopProduct from './TopProduct'
+import News from './components/News'
+import Collect from './components/Collect'
+import Product from './components/Product'
+import TopProduct from './components/TopProduct'
+import Banner from './components/Banner'
+import '../../styles/home.scss';
 export default function Home() {
   return (
     <div>
+      <Banner />
       <Collect />
       <Product />
       <TopProduct />

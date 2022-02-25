@@ -1,7 +1,7 @@
 import React from 'react'
-import Container from '../../components/Container/Container';
+import Container from '../../../components/Container/Container';
 import { Link } from 'react-router-dom';
-import CartIcon from '../../components/CartIcon/CartIcon';
+import CartIcon from '../../../components/CartIcon/CartIcon';
 
 export default function Product() {
     return (
