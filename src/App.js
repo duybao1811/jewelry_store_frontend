@@ -1,12 +1,14 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Layout from './components/Layout/Layout';
 import Home from './views/Home/Home';
+import Product from './views/Product/Product';
 function App() {
   return (
     <Router>
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/danh-muc" element={<Product />} />
         </Routes>
       </Layout>
     </Router>

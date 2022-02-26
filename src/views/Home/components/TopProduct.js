@@ -14,10 +14,12 @@ export default function TopProduct() {
         tablet: {
             breakpoint: { max: 1024, min: 464 },
             items: 2,
+            partialVisibilityGutter: 16,
         },
         mobile: {
             breakpoint: { max: 464, min: 0 },
             items: 1,
+            partialVisibilityGutter: 16,
         }
     };
 
@@ -62,20 +64,18 @@ export default function TopProduct() {
                 <h1 className="uppercase text-4xl text-white text-center font-medium">Sản phẩm mua nhiều</h1>
             </div>
    
-           <div className="max-w-screen-xl mx-auto">
+            <div className="max-w-screen-xl w-full mx-auto">
                 <div className="mr-[-8px] ml-[-8px]">
                     <Carousel
                         swipeable
                         autoPlay
-                        autoPlaySpeed={3000}
+                        autoPlaySpeed={2000}
                         draggable={true}
                         showDots={false}
                         responsive={responsive}
                         ssr={true} // means to render carousel on server-side.
                         infinite={true}
                         keyBoardControl={true}
-                        // customTransition="all .5"
-                        // transitionDuration={500}
                         // removeArrowOnDeviceType={["tablet", "mobile"]}
                         minimumTouchDrag={80}
                         slidesToSlide={1}

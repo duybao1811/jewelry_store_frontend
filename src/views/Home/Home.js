@@ -7,7 +7,7 @@ import Banner from './components/Banner'
 import '../../styles/home.scss';
 export default function Home() {
   return (
-    <div>
+    <div className="w-screen overflow-hidden relative">
       <Banner />
       <Collect />
       <Product />
