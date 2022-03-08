@@ -1,5 +1,5 @@
 import React from 'react'
-import { FiMail, FiClock, FiPhone, FiSearch} from "react-icons/fi";
+import { FiMail, FiClock, FiPhone, FiSearch, FiUser} from "react-icons/fi";
 import Container from '../Container/Container';
 import { Link } from 'react-router-dom';
 import '../../styles/header.scss';
@@ -38,26 +38,32 @@ export default function Header() {
   return (
     <div>
       <div className=" w-full bg-black-3">
-        <Container className="py-2">
-          <div className="flex items-center text-white-1 px-2 border-r border-gray-600 text-sm-md font-medium">
-            <FiMail className="mr-2"/>
-            <span className="uppercase">
-              Contact
-            </span>
-          </div>
-          <div className="flex items-center text-white-1 px-2 border-r border-gray-600 text-sm-md font-medium">
-            <FiClock className="mr-2" />
-            <span className="uppercase">
-              08:00 - 17:00
-            </span>
-          </div>
-          <div className="flex items-center text-white-1 px-2 border-r border-gray-600 text-sm-md font-medium">
-            <FiPhone className="mr-2" />
-            <span className="uppercase">
-              076 922 0162
-            </span>
-          </div>
-        </Container>
+        <div className="flex items-center justify-between py-2 mx-auto max-w-screen-xl">
+         <div className="flex items-center">
+            <div className="flex items-center text-white-1 px-2 border-r border-gray-600 text-sm-md font-medium">
+              <FiMail className="mr-2" />
+              <span className="uppercase">
+                Contact
+              </span>
+            </div>
+            <div className="flex items-center text-white-1 px-2 border-r border-gray-600 text-sm-md font-medium">
+              <FiClock className="mr-2" />
+              <span className="uppercase">
+                08:00 - 17:00
+              </span>
+            </div>
+            <div className="flex items-center text-white-1 px-2 border-r border-gray-600 text-sm-md font-medium">
+              <FiPhone className="mr-2" />
+              <span className="uppercase">
+                076 922 0162
+              </span>
+            </div>
+         </div>
+
+         <Link to="/login" className="text-white text-2xl cursor-pointer">
+            <FiUser />
+         </Link>
+        </div>
       </div>
       <div className="w-full bg-black-2">
         <Container className="justify-between py-5">
@@ -80,12 +86,17 @@ export default function Header() {
               <FiSearch />
             </div>
 
-            <div className="cart-item text-white cursor-pointer flex items-center transition-all duration-100 ease-linear rounded hover:p-3 hover:text-yellow-2 hover:border hover:border-dashed hover:border-yellow-2">
+            <div className="group relative cart-item text-white cursor-pointer flex items-center transition-all duration-100 ease-linear rounded hover:p-3 hover:text-yellow-2 hover:border hover:border-dashed hover:border-yellow-2">
               <span className=" text-md font-medium mr-3">
                 0 <span className="underline">đ</span>
               </span>
               <div className="text-md font-medium w-[30px] h-[30px] relative border-2 border-white flex items-center justify-center cart-icon-header text-white">
                   0
+              </div>
+              <div className="group-hover:flex absolute bg-white top-full border p-3 hidden text-left border-gray-300 min-w-[260px] right-[-20px] h-[100px] z-10 items-center justify-center">
+                <p className="text-[#777]">
+                  Chưa có sản phẩm trong giỏ hàng
+                </p>
               </div>
             </div>
           </ul>
