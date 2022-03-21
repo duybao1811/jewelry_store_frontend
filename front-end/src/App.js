@@ -12,11 +12,14 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/danh-muc" element={<Product />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/login" element={<Login />} />
           <Route path="/news" element={<News />} />
         </Routes>
       </Layout>
+
+      <Routes>
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
     </Router>
   );
 }

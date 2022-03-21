@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import Card from './components/Card';
+import Pagination from '../../components/Pagination'
+import Comment from '../../components/Comment'
 export default function Product() {
   return (
     <div className="max-w-screen-xl w-full mx-auto py-5">
@@ -15,22 +17,22 @@ export default function Product() {
 
           <select className="px-3 py-2 border border-gray-300">
             <option>
-              Thứ tự mặc định
+              Mặc định
             </option>
             <option>
-              Thứ tự theo mức độ phổ biên
-            </option>
-            <option>
-              Thứ tự theo điểm đánh giá
+              Sản phẩm nổi bật
             </option>
             <option>
               Mới nhất
             </option>
             <option>
-              Thứ tự theo giá: thấp đến cao
+              Cũ nhất
             </option>
             <option>
-              Thứ tự theo giá: cao đến thấp
+              Giá: Tăng dần
+            </option>
+            <option>
+              Giá: Giảm dần
             </option>
           </select>
         </div>
@@ -132,36 +134,40 @@ export default function Product() {
             </div>
           </div>
         </div>
-        <div className="w-4/5">
-          <div className="w-1/3 px-2 float-left mb-4">
+        <div className="w-4/5 -mx-2">
+        
+            <div className="w-1/3 px-2 float-left mb-4">
               <Card />
-          </div>
-          <div className="w-1/3 px-2 float-left mb-4">
-            <Card />
-          </div>
-          <div className="w-1/3 px-2 float-left mb-4">
-            <Card />
-          </div>
-          <div className="w-1/3 px-2 float-left mb-4">
-            <Card />
-          </div>
-          <div className="w-1/3 px-2 float-left mb-4">
-            <Card />
-          </div>
-          <div className="w-1/3 px-2 float-left mb-4">
-            <Card />
-          </div>
-          <div className="w-1/3 px-2 float-left mb-4">
-            <Card />
-          </div>
-          <div className="w-1/3 px-2 float-left mb-4">
-            <Card />
-          </div>
-          <div className="w-1/3 px-2 float-left mb-4">
-            <Card />
-          </div>
+            </div>
+            <div className="w-1/3 px-2 float-left mb-4">
+              <Card />
+            </div>
+            <div className="w-1/3 px-2 float-left mb-4">
+              <Card />
+            </div>
+            <div className="w-1/3 px-2 float-left mb-4">
+              <Card />
+            </div>
+            <div className="w-1/3 px-2 float-left mb-4">
+              <Card />
+            </div>
+            <div className="w-1/3 px-2 float-left mb-4">
+              <Card />
+            </div>
+            <div className="w-1/3 px-2 float-left mb-4">
+              <Card />
+            </div>
+            <div className="w-1/3 px-2 float-left mb-4">
+              <Card />
+            </div>
+            <div className="w-1/3 px-2 float-left mb-4">
+              <Card />
+            </div>
+         
         </div>
       </div>
+
+      <Comment />
     </div>
   )
 }
