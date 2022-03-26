@@ -16,23 +16,23 @@ export default function Header() {
     },
     {
       displayName: 'Bộ sưu tập',
-      link: '2'
+      link: '/bo-suu-tap'
     },
     {
       displayName: 'Best Seller',
-      link: '3'
+      link: '/ban-chay'
     },
     {
-      displayName: 'Sale',
-      link: '4'
+      displayName: 'Tin tức',
+      link: '/tin-tuc'
     },
     {
       displayName: 'Liên hệ',
-      link: '5'
+      link: '/lien-he'
     },
     {
       displayName: 'Giới thiệu',
-      link: '6'
+      link: '/gioi-thieu'
     },
   ]
   return (
@@ -60,13 +60,13 @@ export default function Header() {
             </div>
          </div>
 
-         <Link to="/login" className="text-white text-2xl cursor-pointer">
+         <Link to="/dang-nhap" className="text-white text-2xl cursor-pointer">
             <FiUser />
          </Link>
         </div>
       </div>
       <div className="w-full bg-black-2">
-        <Container className="justify-between py-5">
+        <Container className="justify-between items-center py-5">
           <Link to="/">
             <img src="/logo.png" alt="logo" className="w-56"/>
           </Link>
